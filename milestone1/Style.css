@@ -1,0 +1,15 @@
+body{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight:bolder;
+  }
+
+table, th, td {
+    border:1px solid black;
+    padding: 10px;
+  }
