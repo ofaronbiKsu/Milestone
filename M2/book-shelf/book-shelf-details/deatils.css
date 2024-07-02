@@ -1,0 +1,46 @@
+body{
+    margin-top: 5em;
+}
+
+.book-detail {
+    text-align: center;
+    max-width: 37rem;
+    margin: 0 auto;
+    padding: 1.3rem;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, .3);
+}
+
+.book-detail img {
+    max-width: 12.5rem;
+    height: auto;
+}
+
+.book-detail h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.book-detail p {
+    margin: 10px 0;
+}
+
+.btn {
+    padding: .5rem .7rem;
+    font-size:larger;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: #5a6268; 
+}
+
+.home-btn{
+    margin-top: 5rem;
+}

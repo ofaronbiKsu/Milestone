@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="shelf.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>My Bookshelf</h2>
+        <input type="text" id="searchInput" placeholder="Search for books">
+        <button id="searchButton">Search</button>
+        <button id="clearButton">Clear</button>
+        <button id="home-button">Home</button>
+    </div>
+    
+    <div id="bookshelf" class="bookshelf-results"></div>
+    <div id="searchResults" class="search-results"></div>
+    <div id="pagination" class="pagination"></div>
+    <script src="shelf.js"></script>
+</body>
+</html>
