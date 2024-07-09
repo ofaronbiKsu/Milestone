@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="M3.css">
-    <title>Milestone 1</title>
+    <link rel="stylesheet" href="book-shelf/shelf.css">
+    <title>Milestone 3</title>
 </head>
+
 <body>
-    <h1>Yeah it works</h1>
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Search for books">
+        <button id="searchButton">Search</button>
+        <button id="clear-button">Clear</button>
+        <button id="home-button">Home</button>
+    </div>
+
+    <div id="milestoneTwoResults"></div>
+    <div class="pagination">
+        <div id="currentHomePage"></div>
+        <div id="homePagePagination" class="homePagePagination"></div>
+    </div>
+    <div id="myBookshelContainer"></div>
+    <div id="selectedBook"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="M3.js"></script>
+    <script src="book-shelf/shelf.js"></script>
 </body>
+
 </html>
