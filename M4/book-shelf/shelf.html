@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="shelf.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+
+<body>
+    <h2>My Bookshelf</h2>
+
+    <div id="bookshelf" class="bookshelf-results"></div>
+    <div id="searchResults" class="search-results"></div>
+    <div class="pagination">
+        <div id="currentPage"></div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <div id="selectedBook"></div>
+
+    <script id="shelf-book-template" type="x-tmpl-mustache">
+        <div class="book">
+            <div class="book-content" data-id="{{ id }}">
+                <img src="{{ coverImage }}" alt="book image">
+                <p>{{ title }}</p>
+            </div>
+        </div>
+    </script>
+
+    <script id="shelf-book-details-template" type="x-tmpl-mustache">
+        <div class="selectedBook">
+            <img src="{{ coverImage }}" alt="book image">
+            <h1>{{ title }}</h1>
+            <p><strong>Authors:</strong> {{ #authors }}{{ . }}, {{ /authors }}</p>
+            <p><strong>Publisher:</strong> {{ publisher }}</p>
+            <p><strong>Published:</strong> {{ year }}</p>
+            <p><strong>Description:</strong> {{ description }}</p>
+            <p><strong>Price:</strong> {{ price }}</p>
+            <button id="closeBtn">Close</button>
+        </div>
+    </script>
+
+    <script src="shelf.js"></script>
+</body>
+
+</html>
