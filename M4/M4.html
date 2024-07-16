@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="M4.css">
-    <title>Milestone 1</title>
+    <link rel="stylesheet" href="book-shelf/shelf.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    <title>Milestone 4</title>
 </head>
+
 <body>
-    <h1>Yeah it works</h1>
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Search for books">
+        <button id="searchButton">Search</button>
+        <button id="clear-button">Clear</button>
+        <button id="home-button">Home</button>
+    </div>
+
+    <div id="milestoneTwoResults"></div>
+    <div class="pagination">
+        <div id="currentHomePage"></div>
+        <div id="homePagePagination" class="homePagePagination"></div>
+    </div>
+    <div id="myBookshelContainer"></div>
+    <div id="selectedBook"></div>
+
+    <script id="book-template" type="x-tmpl-mustache">
+        <div class="book" data-book-id="{{ id }}">
+            <img src="{{ coverImage }}" alt="book image" onerror="this.onerror=null;this.src='images/imageNotFound.png';">
+            {{ title }}
+        </div>
+    </script>
+
+    <script id="book-detail-template" type="x-tmpl-mustache">
+        <div class="book-detail">
+            <img src="{{ coverImage }}" alt="book image">
+            <h1>{{ title }}</h1>
+            <p><strong>Authors:</strong> {{ #authors }}{{ . }}{{ /authors }}</p>
+            <p><strong>Publisher:</strong> {{ publisher }}</p>
+            <p><strong>Published:</strong> {{ year }}</p>
+            <p><strong>Description:</strong> {{ description }}</p>
+            <p><strong>Price:</strong> {{ price }}</p>
+            <button id="closeBookBtn">Close</button>
+        </div>
+    </script>
+
+    <script src="M4.js"></script>
+    <script src="book-shelf/shelf.js"></script>
 </body>
+
 </html>
